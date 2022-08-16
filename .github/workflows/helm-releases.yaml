@@ -34,7 +34,8 @@ jobs:
   diff:
     name: Diff Helm Releases
     runs-on: ubuntu-22.04
-    needs: detect-file-changes
+    needs:
+      - changes
     strategy:
       matrix:
         file: ${{ fromJSON(needs.changes.outputs.yamls) }}
