@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "HashiCorp.terraform",
+    "britesnow.vscode-toggle-quotes",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "oderwat.indent-rainbow",
+    "redhat.ansible",
+    "signageos.signageos-vscode-sops",
+    "usernamehw.errorlens",
+    "wholroyd.jinja",
+    "standard.vscode-standard"
+  ]
+}

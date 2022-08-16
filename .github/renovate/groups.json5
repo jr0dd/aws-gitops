@@ -1,0 +1,58 @@
+{
+  packageRules: [
+    {
+      description: "Cert-Manager chart & CRDs",
+      groupName: "Cert-Manager",
+      matchPackagePatterns: ["cert-manager"],
+      matchDatasources: ["helm", "docker"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    },
+    {
+      description: "Cilium image and chart",
+      groupName: "Cilium",
+      matchPackagePatterns: ["cilium"],
+      matchDatasources: ["helm", "docker"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    },
+    {
+      description: "External Snapshotter image and CRDs",
+      groupName: "External Snapshotter",
+      matchPackagePatterns: ["snapshot", "csi"],
+      matchDatasources: ["docker", "github-tags"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    },
+    {
+      description: "KPS chart and CRDs",
+      groupName: "Kube Prometheus Stack",
+      matchPackagePatterns: ["kube-prometheus-stack"],
+      matchDatasources: ["helm"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    },
+    {
+      description: "Thanos image and chart",
+      groupName: "Thanos",
+      matchPackagePatterns: ["thanos"],
+      matchDatasources: ["docker", "github-releases", "helm"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    },
+    {
+      description: "Vector image and chart",
+      groupName: "Vector",
+      matchPackagePatterns: ["vector"],
+      matchDatasources: ["docker", "github-releases", "helm"],
+      matchUpdateTypes: ["minor", "patch"],
+      group: { commitMessageTopic: "{{{groupName}}} group" },
+      separateMinorPatch: false
+    }
+  ]
+}

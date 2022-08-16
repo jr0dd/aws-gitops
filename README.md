@@ -1,1 +1,1 @@
-# aws-infra
+# aws-gitops

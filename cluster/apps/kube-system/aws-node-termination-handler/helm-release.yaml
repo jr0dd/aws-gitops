@@ -1,0 +1,30 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: aws-node-termination-handler
+  namespace: kube-system
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: aws-node-termination-handler
+      version: 1.16.5
+      sourceRef:
+        kind: HelmRepository
+        name: eks
+        namespace: flux-system
+  install:
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  values:
+    image:
+      repository: public.ecr.aws/aws-ec2/aws-node-termination-handler
+      tag: 1.16.5
+    jsonLogging: true
+    awsRegion: us-east-1
+    workers: 3
+    useProviderId: false

@@ -1,0 +1,5 @@
+charts/
+.github/renovate/
+.vscode/
+terraform/
+*.sops.*

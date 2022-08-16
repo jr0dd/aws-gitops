@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: aws-gitops
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: ssh://git@github.com/jr0dd/aws-gitops
+  ref:
+    branch: main
+  secretRef:
+    name: flux-github-key

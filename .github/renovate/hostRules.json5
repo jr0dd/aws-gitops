@@ -1,0 +1,10 @@
+{
+  hostRules: [
+    {
+      hostType: "docker",
+      matchHost: "ghcr.io/jr0dd",
+      username: "jr0dd",
+      password: "process.env.GITHUB_TOKEN"
+    }
+  ]
+}
