@@ -23,7 +23,7 @@ spec:
   values:
     image:
       repository: public.ecr.aws/aws-ec2/aws-node-termination-handler
-      tag: 1.16.5
+      tag: v1.16.5
     jsonLogging: true
     awsRegion: us-east-1
     workers: 3
